@@ -1,0 +1,31 @@
+import java.util.Scanner;
+ 
+class grade{
+    int math, science, english, filipino;
+public grade (int msub, int ssub, int esub, int fsub){
+    math = msub;
+    science = ssub;
+    english = esub;
+    filipino = fsub;
+}
+void average(){
+    int gAve  = math + science + english + filipino;
+    int result = gAve / 4;
+    System.out.println("Average: " + result);
+}
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+       System.out.println("Enter grade in Mathematics: ");
+       int math = scan.nextInt();
+       System.out.println("Enter grade in Science: ");
+       int science = scan.nextInt();
+       System.out.println("Enter grade in English: ");
+       int english = scan.nextInt();
+       System.out.println("Enter grade in Filipino: ");
+       int filipino = scan.nextInt();
+       grade grade1 = new grade (math, science, english, filipino);
+       grade1.average();
+    }
+}
