@@ -1,0 +1,29 @@
+class studentinfo {
+    String studf, studl, studnum, studcour;
+
+public studentinfo (String f, String l, String num, String cour) {
+    studf = f;
+    studl = l;
+    studnum = num;
+    studcour = cour;
+}
+void info () {
+    System.out.println("Student's Name: " + studf + "," + studl);
+    System.out.println("Student ID Number: " + studnum);
+    System.out.println("Course: " + studcour + "\n");
+  }
+}
+class Main {
+    public static void main(String[] args) {
+        
+        studentinfo stud1 = new studentinfo ("Roshwill Raine", "Marquina", "2025001","BSIT");
+        studentinfo stud2 = new studentinfo ("Roshwill Raine", "Marquina", "2025001","BSIT");
+        studentinfo stud3 = new studentinfo ("Roshwill Raine", "Marquina", "2025001","BSIT");
+        
+    stud1.info();
+    stud2.info();
+    stud3.info();   
+    
+    
+    }
+}
