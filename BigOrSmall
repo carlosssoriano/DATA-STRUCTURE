@@ -1,0 +1,61 @@
+package javaapplication15;
+import java.util.Scanner;
+
+class BigorSmall {
+    int num1, num2, num3;
+    
+public BigorSmall (int n1, int n2, int n3) {
+    this.num1 = n1;
+    this.num2 = n2;
+    this.num3 = n3;
+}    
+
+void Biggest(){
+    if ((num1>num2) && (num1>num3))
+        System.out.println("The " +num1+ " is the biggest of the three numbers");
+    
+    else if ((num2>num1) && (num2>num3))
+        System.out.println("The " +num2+ " is the biggest of the three numbers");
+   
+    else if ((num3>num1) && (num3>num2))
+        System.out.println("The " +num3+ " is the biggest of the three numbers");
+    
+    else 
+        System.out.println("Invalid");
+}
+
+void Smallest(){
+    if ((num1<num2) && (num1<num3))
+        System.out.println("The " +num1+ " is the smallest of the three numbers");
+    
+    else if ((num2<num1) && (num2<num3))
+        System.out.println("The " +num2+ " is the smallest of the three numbers");
+   
+    else if ((num3<num1) && (num3<num2))
+        System.out.println("The " +num3+ " is the smallest of the three numbers");
+    
+    else 
+        System.out.println("Invalid");
+}
+}
+
+public class JavaApplication15 {
+    public static void main(String[] args) {
+    Scanner x =  new Scanner (System.in);
+    int num1, num2, num3;
+    
+        System.out.print("Enter the First Number: ");
+        num1 = x.nextInt();
+        System.out.print("Enter the Second Number: ");
+        num2 = x.nextInt();
+        System.out.print("Enter the Third Number: ");
+        num3 = x.nextInt();
+     
+    BigorSmall sample1 = new BigorSmall(num1,num2,num3);
+    sample1.Biggest();
+    sample1.Smallest();
+    
+       
+    }
+    
+}
