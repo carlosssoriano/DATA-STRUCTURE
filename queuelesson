@@ -1,0 +1,27 @@
+package queuelesson;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueLesson {
+    public static void main(String[] args) {
+        
+        Queue<String> PhilHeroes = new LinkedList<>();
+        int i = 1;
+        
+        PhilHeroes.offer("Jose Rizal");
+        PhilHeroes.offer("Andres Bonifacio");
+        PhilHeroes.offer("Emilio Aguinaldo");
+        PhilHeroes.offer("Apolinario Mabini");
+        
+        String hero1 = PhilHeroes.peek();
+        System.out.println("Hero on the Top of the list: " + hero1);
+        System.out.println("Philippine Heroes on the List: " + PhilHeroes + "\n");
+        
+        while (PhilHeroes.size() > 0) {
+            String hero = PhilHeroes.peek();
+            System.out.println(i + ". " + hero);
+            PhilHeroes.poll();
+            i++;
+        }
+    }
+}
