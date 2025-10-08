@@ -1,0 +1,36 @@
+package stacklesson;
+import java.util.Stack;
+
+public class Stacklesson {
+    public static void main (String[] args) {
+        int i = 1;
+        Stack<String> MarvelMovies = new Stack <>(); //create stack
+        
+        System.out.println("Initial Stack: " + MarvelMovies); //Display Stack
+        
+        MarvelMovies.push("Iron man (May 2, 2008)"); //adds movie in the stack
+        MarvelMovies.push("Iron man 2 (May 7, 2010)");    
+        MarvelMovies.push("Thor (May 6, 2011)");
+        MarvelMovies.push("The First Avengers (May 4, 2012)");
+        MarvelMovies.push("Age of ultron (May 1, 2015)");
+        MarvelMovies.push("Infinity War (April 27, 2018)");
+        MarvelMovies.push("Endgame (April 26, 2019)");
+        MarvelMovies.push("Eternals (November 5, 2021)");
+        MarvelMovies.push("Thunderbolts (May 2, 2025)");
+        MarvelMovies.push("Fantastic Four (July 25, 2025)");
+        
+    System.out.println("Number of movies in the List:" + MarvelMovies.size());
+    
+    String LatestMovie = MarvelMovies.peek();
+    System.out.println("The latest Marvel Movie is: " + LatestMovie);
+    
+    System.out.println("Marvel Movies in the List: ");
+    
+    while (!MarvelMovies.empty()) {
+        String movie = MarvelMovies.peek();
+        System.out.println( i + ". " + movie);
+        MarvelMovies.pop();
+        i++;
+    }
+    }
+}
